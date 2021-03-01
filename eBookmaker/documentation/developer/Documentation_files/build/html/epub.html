@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>epub module &#8212; eBook Maker  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Modules" href="modules.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="Modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">eBook Maker  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">Modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">epub module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-epub">
+<span id="epub-module"></span><h1>epub module<a class="headerlink" href="#module-epub" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="epub.URLentry_click">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">URLentry_click</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.URLentry_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is bound to “URLentry” entry widget of GUI. When user FOCUS-IN, it takes appropriate action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>call-back event.</em>) – </p>
+</dd>
+</dl>
+<p>No Return Values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.delete_temp_folder">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">delete_temp_folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.delete_temp_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes temporary files and folders, if created, that were necessary for the execution and creation of epub document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>Path to temporary files and folders; which is same as the path inputted by the user in GUI.</em>) – </p>
+</dd>
+</dl>
+<p>No Return values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.downloadImg">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">downloadImg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">pathname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.downloadImg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the image specified by the URL to the temporary images folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>URL of the image contained in the webpage.</em>) – </p></li>
+<li><p><strong>pathname</strong> (<em>Path to the &quot;images&quot; folder inside the temporary directory created.</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>No Return Value</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.extractPerLink">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">extractPerLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">pathArg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.extractPerLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a given URL, extract HTML contents, save as .html file in a temporary directory created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>The URL from which the content is to be extracted.</em>) – </p></li>
+<li><p><strong>pathArg</strong> (<em>Path to the temporary directory created at the path specified by user in GUI for saving epub.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>The name of the html file created.</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.extract_contents">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">extract_contents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">textfilepath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.extract_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each link present in __links__.txt , call extractPerLink() to extract HTML contents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>Path to which epub is saved</em><em>, </em><em>as given by the user in the GUI.</em>) – </p></li>
+<li><p><strong>textfilepath</strong> (<em>Path to the file __links__.txt that contains the urls to be extracted.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Status of execution - “Okay” if successful ; Exception otherwise.</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.extract_links">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">extract_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">doctype</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.extract_links" title="Permalink to this definition">¶</a></dt>
+<dd><p>It fetches the useful links of content from the webpage of given URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>It is URL inputted by the user in the GUI</em>) – </p></li>
+<li><p><strong>path</strong> (<em>Path to which epub is saved</em><em>, </em><em>as given by the user in the GUI.</em>) – </p></li>
+<li><p><strong>doctype</strong> (<em>Whether the user wants to convert a &quot;Single Page&quot;</em><em> or </em><em>&quot;Complete Tutorial&quot; into epub. By default &quot;Complete Tutorial&quot;</em><em>(</em><em>1</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Status of execution- “Okay” if successful ; Exception otherwise.</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.generate_epub">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">generate_epub</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.generate_epub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate epub document at the given path, taking list of html file names of listOfFiles and taking images from listofImg.
+Each html file is added as a new chapter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>Path to which epub is saved</em><em>, </em><em>as given by the user in the GUI.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Status of execution - “Okay” if successful ; Exception otherwise.</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.is_valid">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">is_valid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the url of image present in the webpage is valid or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>URL of the image to be downloaded.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>True or False</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.multipage">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">multipage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#epub.multipage" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is bound to “Complete Tutorial” radio button, indicates contents from the whole tutorial to be extracted.</p>
+<p>No Parameters</p>
+<p>No Return Values</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.on_closing">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">on_closing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#epub.on_closing" title="Permalink to this definition">¶</a></dt>
+<dd><p>When user wants to close the application, it displays a prompt, and once user confirms quitting, closes all the windows and terminates all the background processes.</p>
+<p>No parameters</p>
+<p>No Return Values</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.resize_image">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">resize_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span></em><span class="sig-paren">)</span><a class="headerlink" href="#epub.resize_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resizing the background image to the size of the GUI window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>callback event.</em>) – </p>
+</dd>
+</dl>
+<p>No return values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.singlepage">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">singlepage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#epub.singlepage" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is bound to “Single Page” radio button, indicates contents from a single page to be extracted.</p>
+<p>No Parameters</p>
+<p>No Return Values</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.take_path">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">take_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#epub.take_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is bound to “Browse” button of GUI and it allows the user to browse through all the locations on his computer to select the destination for epub document.</p>
+<p>No parameters.</p>
+<p>No Return Values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="epub.validate_entries">
+<code class="sig-prename descclassname">epub.</code><code class="sig-name descname">validate_entries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#epub.validate_entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is bound to “Generate epub” button. It checks if all the input fields are non-empty.
+Calls <cite>extract_links</cite>, <cite>extract_contents</cite>, and <cite>generate_epub</cite> and handles exceptions.
+Calls <cite>delete_temp_folder</cite> at the end.</p>
+<p>No parameters.</p>
+<p>No Return Values.</p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">Modules</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/epub.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="Modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">eBook Maker  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >Modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">epub module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, We_did_our_best.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+    </div>
+  </body>
+</html>
